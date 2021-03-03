@@ -58,12 +58,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Controllers\AimingMuzzle.cs" />
+     <Compile Include="Assets\Scripts\Controllers\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Controllers\BulletsEmitter.cs" />
+     <Compile Include="Assets\Scripts\Controllers\MainHeroWalker.cs" />
      <Compile Include="Assets\Scripts\Controllers\ParalaxManager.cs" />
+     <Compile Include="Assets\Scripts\Controllers\SpriteAnimatorController.cs" />
      <Compile Include="Assets\Scripts\Lessons.cs" />
      <Compile Include="Assets\Scripts\SpriteAnimationsConfig.cs" />
-     <Compile Include="Assets\Scripts\SpriteAnimator.cs" />
      <Compile Include="Assets\Scripts\Views\BlockView.cs" />
      <Compile Include="Assets\Scripts\Views\CharacterView.cs" />
+     <Compile Include="Assets\Scripts\Views\GunView.cs" />
+     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>F:/UnityProjects/GB/GB_Unity2D/GB_Unity2D/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
