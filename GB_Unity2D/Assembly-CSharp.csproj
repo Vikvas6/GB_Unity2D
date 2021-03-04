@@ -61,8 +61,13 @@
      <Compile Include="Assets\Scripts\Controllers\AimingMuzzle.cs" />
      <Compile Include="Assets\Scripts\Controllers\Bullet.cs" />
      <Compile Include="Assets\Scripts\Controllers\BulletsEmitter.cs" />
+     <Compile Include="Assets\Scripts\Controllers\CoinsManager.cs" />
+     <Compile Include="Assets\Scripts\Controllers\ContactsPoller.cs" />
+     <Compile Include="Assets\Scripts\Controllers\LevelCompleteManager.cs" />
+     <Compile Include="Assets\Scripts\Controllers\MainHeroPhysicsWalker.cs" />
      <Compile Include="Assets\Scripts\Controllers\MainHeroWalker.cs" />
      <Compile Include="Assets\Scripts\Controllers\ParalaxManager.cs" />
+     <Compile Include="Assets\Scripts\Controllers\PhysicalBullet.cs" />
      <Compile Include="Assets\Scripts\Controllers\SpriteAnimatorController.cs" />
      <Compile Include="Assets\Scripts\Lessons.cs" />
      <Compile Include="Assets\Scripts\SpriteAnimationsConfig.cs" />
