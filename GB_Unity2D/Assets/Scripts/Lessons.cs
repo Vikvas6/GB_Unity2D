@@ -13,6 +13,8 @@ public class Lessons : MonoBehaviour
     [SerializeField] private List<CharacterView> _deathZones;
     [SerializeField] private List<CharacterView> _winZones;
     [SerializeField] private GameObject _victoryPanel;
+    [SerializeField] private List<CharacterView> _elevators;
+    [SerializeField] private List<CharacterView> _elevatorLimits;
     
 
     //[SerializeField] private SomeView _someView;
@@ -24,6 +26,7 @@ public class Lessons : MonoBehaviour
     private AimingMuzzle _muzzle;
     private BulletsEmitter _bulletEmitter;
     private LevelCompleteManager _levelCompleteManager;
+    private ElevatorManager _elevatorManager;
     
     private void Start()
     {
@@ -40,6 +43,7 @@ public class Lessons : MonoBehaviour
         CoinsManager coinsManager = new CoinsManager(_characterView, _coinSpriteAnimator, _coinViews);
 
         _levelCompleteManager = new LevelCompleteManager(_characterView, _deathZones, _winZones, _victoryPanel);
+        _elevatorManager = new ElevatorManager(_elevators, _elevatorLimits);
     }
 
     private void Update()

@@ -57,7 +57,7 @@ public class MainHeroPhysicsWalker
         
         if (_contactsPoller.IsGrounded)
         {
-            if (_doJump && Mathf.Abs(_view.Rigidbody2D.velocity.y) <= _jumpThresh)
+            if (_doJump && Mathf.Abs(_view.Rigidbody2D.velocity.y - _contactsPoller.GroundVelocty.y) <= _jumpThresh)
             {
                 _view.Rigidbody2D.AddForce(Vector2.up * _jumpForce);
             }

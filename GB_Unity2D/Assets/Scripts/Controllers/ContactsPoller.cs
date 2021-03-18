@@ -14,6 +14,8 @@ public class ContactsPoller
     public bool HasLeftContacts { get; private set; }
     public bool HasRightContacts { get; private set; }
 
+    public Vector3 GroundVelocty { get; private set; }
+
     public ContactsPoller(Collider2D collider2D)
     {
         _collider2D = collider2D;
@@ -33,6 +35,7 @@ public class ContactsPoller
             if (normal.y > _collisionThresh)
             {
                 IsGrounded = true;
+                GroundVelocty = rigidBody == null ? Vector2.zero : rigidBody.velocity;
             }
             if (normal.x > _collisionThresh && rigidBody == null)
             {

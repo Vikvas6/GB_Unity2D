@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Controllers\BulletsEmitter.cs" />
      <Compile Include="Assets\Scripts\Controllers\CoinsManager.cs" />
      <Compile Include="Assets\Scripts\Controllers\ContactsPoller.cs" />
+     <Compile Include="Assets\Scripts\Controllers\ElevatorManager.cs" />
      <Compile Include="Assets\Scripts\Controllers\LevelCompleteManager.cs" />
      <Compile Include="Assets\Scripts\Controllers\MainHeroPhysicsWalker.cs" />
      <Compile Include="Assets\Scripts\Controllers\MainHeroWalker.cs" />
