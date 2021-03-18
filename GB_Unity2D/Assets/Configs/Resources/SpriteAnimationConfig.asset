@@ -30,7 +30,7 @@ MonoBehaviour:
   - Track: 2
     Sprites:
     - {fileID: 7460046300004610927, guid: 5d2d7f4ab1e201048be99e1dc5fc3488, type: 3}
-    - {fileID: 7034338576483803127, guid: 5d2d7f4ab1e201048be99e1dc5fc3488, type: 3}
+    - {fileID: 7460046300004610927, guid: 5d2d7f4ab1e201048be99e1dc5fc3488, type: 3}
   - Track: 1
     Sprites:
     - {fileID: 4944230376442633554, guid: 2b22e58cf7fbd7946b874f61d6cbbebc, type: 3}

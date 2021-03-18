@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BulletsEmitter
 {    
-    private const float _delay = 1;
-    private const float _startSpeed = 5;
+    private const float _delay = 3;
+    private const float _startSpeed = 1;
 
-    private List<Bullet> _bullets = new List<Bullet>();
+    private List<PhysicalBullet> _bullets = new List<PhysicalBullet>();
     private Transform _transform;
 
     private int _currentIndex;
@@ -18,7 +18,7 @@ public class BulletsEmitter
         _transform = transform;
         foreach (var bulletView in bulletViews)
         {
-            _bullets.Add(new Bullet(bulletView));
+            _bullets.Add(new PhysicalBullet(bulletView));
         }
     }
 
@@ -35,6 +35,5 @@ public class BulletsEmitter
             _currentIndex++;
             if (_currentIndex >= _bullets.Count) _currentIndex = 0;
         }
-        _bullets.ForEach(b => b.UpdateTick());
     }
 }
