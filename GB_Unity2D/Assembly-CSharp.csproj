@@ -58,23 +58,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Controllers\AIPatrolPath.cs" />
      <Compile Include="Assets\Scripts\Controllers\AimingMuzzle.cs" />
      <Compile Include="Assets\Scripts\Controllers\Bullet.cs" />
      <Compile Include="Assets\Scripts\Controllers\BulletsEmitter.cs" />
      <Compile Include="Assets\Scripts\Controllers\CoinsManager.cs" />
      <Compile Include="Assets\Scripts\Controllers\ContactsPoller.cs" />
      <Compile Include="Assets\Scripts\Controllers\ElevatorManager.cs" />
+     <Compile Include="Assets\Scripts\Controllers\IProtector.cs" />
      <Compile Include="Assets\Scripts\Controllers\LevelCompleteManager.cs" />
      <Compile Include="Assets\Scripts\Controllers\MainHeroPhysicsWalker.cs" />
      <Compile Include="Assets\Scripts\Controllers\MainHeroWalker.cs" />
      <Compile Include="Assets\Scripts\Controllers\ParalaxManager.cs" />
      <Compile Include="Assets\Scripts\Controllers\PhysicalBullet.cs" />
+     <Compile Include="Assets\Scripts\Controllers\ProtectedZone.cs" />
+     <Compile Include="Assets\Scripts\Controllers\ProtectorAI.cs" />
      <Compile Include="Assets\Scripts\Controllers\SpriteAnimatorController.cs" />
+     <Compile Include="Assets\Scripts\Controllers\StalkerAI.cs" />
      <Compile Include="Assets\Scripts\Lessons.cs" />
+     <Compile Include="Assets\Scripts\Models\AIConfig.cs" />
+     <Compile Include="Assets\Scripts\Models\PatrolAIModel.cs" />
+     <Compile Include="Assets\Scripts\Models\StalkerAIModel.cs" />
      <Compile Include="Assets\Scripts\SpriteAnimationsConfig.cs" />
      <Compile Include="Assets\Scripts\Views\BlockView.cs" />
      <Compile Include="Assets\Scripts\Views\CharacterView.cs" />
+     <Compile Include="Assets\Scripts\Views\EnemiesConfigurator.cs" />
      <Compile Include="Assets\Scripts\Views\GunView.cs" />
+     <Compile Include="Assets\Scripts\Views\LevelObjectTrigger.cs" />
      <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>F:/UnityProjects/GB/GB_Unity2D/GB_Unity2D/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
@@ -285,6 +295,9 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>F:/Program Files/Unity/Hub/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+ <HintPath>F:/UnityProjects/GB/GB_Unity2D/GB_Unity2D/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>F:/Program Files/Unity/Hub/2019.3.0f6/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -631,6 +644,20 @@
  <Reference Include="System.Xml.Serialization">
  <HintPath>F:/Program Files/Unity/Hub/2019.3.0f6/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{5681124C-B73F-DA82-3A0C-192AD231AE32}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{1166E7A3-AD44-2EA2-48E0-FBF92159E03C}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{7A92FF13-6154-BE9A-464E-F42FC7E713F6}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
