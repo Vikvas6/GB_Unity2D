@@ -15,6 +15,7 @@ public class Lessons : MonoBehaviour
     [SerializeField] private GameObject _victoryPanel;
     [SerializeField] private List<CharacterView> _elevators;
     [SerializeField] private List<CharacterView> _elevatorLimits;
+    [SerializeField] private AstarPath _pathfinder;
     
 
     //[SerializeField] private SomeView _someView;
@@ -27,6 +28,9 @@ public class Lessons : MonoBehaviour
     private BulletsEmitter _bulletEmitter;
     private LevelCompleteManager _levelCompleteManager;
     private ElevatorManager _elevatorManager;
+
+    [SerializeField] private GenerateLevelView _generateLevelView;
+    private GeneratorLevelController _generatorLevelController;
     
     private void Start()
     {
@@ -44,6 +48,20 @@ public class Lessons : MonoBehaviour
 
         _levelCompleteManager = new LevelCompleteManager(_characterView, _deathZones, _winZones, _victoryPanel);
         _elevatorManager = new ElevatorManager(_elevators, _elevatorLimits);
+    }
+
+    private void Awake()
+    {
+        
+        _generatorLevelController = new GeneratorLevelController(_generateLevelView);
+        _generatorLevelController.Awake();
+        
+        Invoke(nameof(ScanPath), 0.2f);
+    }
+
+    private void ScanPath()
+    {
+        AstarPath.active.Scan(AstarPath.active.graphs[0]);
     }
 
     private void Update()
